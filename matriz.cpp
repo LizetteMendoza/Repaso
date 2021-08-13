@@ -79,8 +79,6 @@ void Matriz::recuperar(){
 
             agregarBodega(b);
             
-            
-            
         }
     }
     archivo.close();
