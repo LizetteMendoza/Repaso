@@ -25,6 +25,7 @@ class Bodega{
             out<<setw(15)<<b.producto;
             out<<setw(10)<<b.cantidad;
             out<<setw(10)<<b.precio;
+            out<<endl;
             
             return out;
         }
