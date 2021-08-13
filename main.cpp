@@ -26,8 +26,7 @@ int main() {
 
 	Bodega b3;
 	cin>>b3;
-
-	m.agregarBodega(b3);
+	m<<b3;
 
 	m.mostrar();
 
