@@ -1,4 +1,5 @@
 #include"matriz.h"
+#include<fstream>
 
 Matriz::Matriz(){
 
@@ -27,7 +28,19 @@ void Matriz::mostrar(){
         cout<<"Cantidad: "<<b.getCantidad()<<endl;
         cout<<"Precio: "<<b.getPrecio()<<endl;*/
         cout<<b;
-        cout<<endl;
+        //cout<<endl;
     }
 
+}
+
+void Matriz::respaldar(){
+
+    ofstream archivo("bodega.txt");
+    if (archivo.is_open()){
+        for(size_t i=0; i<cont; i++){
+            Bodega &b = arreglo[i];
+            archivo << b;
+        }
+    }
+    archivo.close();
 }
