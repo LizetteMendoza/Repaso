@@ -30,10 +30,9 @@ int main() {
 	m<<b3;
 
 	m.mostrar();*/
-
-	m.recuperar();
-
 	cout<<"Recuperado"<<endl;
+	m.recuperar();
+	
 	m.mostrar();
 
 	return 0;
