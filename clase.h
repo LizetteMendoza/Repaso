@@ -40,12 +40,11 @@ class Bodega{
             b.setProducto(temp);
 
             cout<<"Cantidad: ";
-            cin>>b.cantidad;
+            cin>>b.cantidad; cin.ignore();
 
             cout<<"Precio: ";
-            cin>>b.precio;
+            cin>>b.precio; cin.ignore();
 
-            
             return in;
         }
     };
