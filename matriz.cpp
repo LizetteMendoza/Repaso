@@ -65,15 +65,15 @@ void Matriz::recuperar(){
             if(archivo.eof()){
                 break;
             }
-            cout<<"Producto"<<temp<<endl;
+            
             b.setProducto(temp);
             getline(archivo, temp,'|');
             cantidad = stoi(temp);
-            cout<<"Cantidad"<<temp<<endl;
+            
             b.setCantidad(cantidad);
             
             getline(archivo, temp,'*');
-            cout<<"Precio"<<temp<<endl;;
+            
             precio = stof(temp);
             b.setPrecio(precio);
 
