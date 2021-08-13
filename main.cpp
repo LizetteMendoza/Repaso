@@ -29,6 +29,7 @@ int main() {
 	m<<b3;
 
 	m.mostrar();
+	m.respaldar();
 
 	return 0;
 }
