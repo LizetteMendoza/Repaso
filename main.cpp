@@ -22,6 +22,7 @@ int main() {
 	m.agregarBodega(b1);*/
 
 
+
 	//cout<<b2;
 
 	/*Bodega b3;
