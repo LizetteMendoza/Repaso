@@ -11,6 +11,7 @@ public:
     Matriz();
     void agregarBodega(const Bodega&b);
     void mostrar();
+    void respaldar();
 
     friend Matriz& operator <<(Matriz& m, const Bodega&b){
         m.agregarBodega(b);
