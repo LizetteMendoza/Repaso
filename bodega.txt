@@ -1,3 +1,1 @@
-Cerveza        25        32.5      
-Frituras       50        25.5      
-agua           140       7.4       
+Cerveza|25|32.5*Frituras|50|25.5*jabon|7|12.6*

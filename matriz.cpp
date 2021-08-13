@@ -1,6 +1,8 @@
 #include"matriz.h"
 #include<fstream>
+#include<string>
 
+using namespace std;
 Matriz::Matriz(){
 
     cont=0;
@@ -39,7 +41,46 @@ void Matriz::respaldar(){
     if (archivo.is_open()){
         for(size_t i=0; i<cont; i++){
             Bodega &b = arreglo[i];
-            archivo << b;
+            archivo << b.getProducto()<<"|";
+            archivo << b.getCantidad()<<"|";
+            archivo << b.getPrecio()<<"*";
+
+        }
+    }
+    archivo.close();
+}
+
+void Matriz::recuperar(){
+
+    ifstream archivo("bodega.txt");
+    if(archivo.is_open()){
+        string temp;
+        int cantidad;
+        float precio;
+        Bodega b;
+
+        while(true){
+           
+            getline(archivo,temp,'|');
+            if(archivo.eof()){
+                break;
+            }
+            cout<<"Producto"<<temp<<endl;
+            b.setProducto(temp);
+            getline(archivo, temp,'|');
+            cantidad = stoi(temp);
+            cout<<"Cantidad"<<temp<<endl;
+            b.setCantidad(cantidad);
+            
+            getline(archivo, temp,'*');
+            cout<<"Precio"<<temp<<endl;;
+            precio = stof(temp);
+            b.setPrecio(precio);
+
+            agregarBodega(b);
+            
+            
+            
         }
     }
     archivo.close();
