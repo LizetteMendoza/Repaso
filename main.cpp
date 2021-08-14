@@ -19,7 +19,7 @@ int main() {
 	cout<<b2.getPrecio()<<endl;*/
 	
 
-	Matriz m;
+	Matriz <Bodega> m;
 	m.insertar_final(b1);
 	m.insertar_final(b2);
 	m.insertar_final(b4);
@@ -28,10 +28,12 @@ int main() {
 	cout<<"Tamanio"<<m.size()<<endl;
 	
 
-	for (size_t i = 0; i < m.size(); i++)
+	/*for (size_t i = 0; i < m.size(); i++)
 	{
 		cout<<m[i]<<" ";
-	}
+	}*/
+
+	m.mostrar();
 	
 
 
@@ -43,11 +45,11 @@ int main() {
 
 	m<<b3;
 
-	m.mostrar();*/
-	/*cout<<"Recuperado"<<endl;
-	m.recuperar();
+	m.mostrar();
+	cout<<"Recuperado"<<endl;
+	m.recuperar();*/
 	
-	m.mostrar();*/
+	//m.mostrar();
 
 	return 0;
 }
