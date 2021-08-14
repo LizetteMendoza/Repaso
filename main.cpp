@@ -34,6 +34,14 @@ int main() {
 	}*/
 
 	m.mostrar();
+	cout<<endl<<endl<<endl;
+
+	Bodega b6 = Bodega("Cigarros",45,30);
+
+	m.insertar(b6,3);
+
+	m.mostrar();
+	cout<<endl;
 	
 
 
