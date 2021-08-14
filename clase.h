@@ -18,7 +18,7 @@ class Bodega{
         int getCantidad();
         void setPrecio(float v);
         float getPrecio();
-
+        
         friend ostream& operator<<(ostream&out, const Bodega&b){
             
             out<<left;
@@ -48,7 +48,23 @@ class Bodega{
 
             return in;
         }
+        bool operator == (const Bodega&b){
+
+        return producto == b.producto;
+        }
+
+        bool operator == ( Bodega&b){
+
+        return producto == b.producto;
+        }
     };
+
+    
+
+
+
+
+
 
 
 #endif
