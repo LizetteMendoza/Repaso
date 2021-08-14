@@ -26,6 +26,7 @@ public:
     void recuperar();
     void insertar_final(T &v);
     void insertar_inicio(T &v);
+    void insertar(T &v, size_t p);
     size_t size();
     T operator[](size_t p){
         return arreglo[p];
@@ -92,6 +93,25 @@ void Matriz<T>::insertar_inicio(T &v){
         arreglo[i]=arreglo[i-1];
     }
     arreglo[0] = v;
+    cont++;
+    
+}
+
+template<class T>
+void Matriz<T>::insertar(T &v, size_t p){
+    
+    if (p>=cont){
+        cout<<"Posicion no valida"<<endl;
+        return;
+    }
+    if(cont == tam){
+        expandir();
+    }
+    for (size_t i = cont; i > p; i--)
+    {
+        arreglo[i]=arreglo[i-1];
+    }
+    arreglo[p] = v;
     cont++;
     
 }
