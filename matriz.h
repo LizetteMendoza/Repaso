@@ -30,6 +30,7 @@ public:
     void eliminar_final();
     void eliminar_inicio();
     void eliminar(size_t p);
+    T* buscar(const T&v);
     size_t size();
     T operator[](size_t p){
         return arreglo[p];
@@ -155,6 +156,19 @@ void Matriz<T>::eliminar(size_t p){
     }
     cont--;
    
+}
+
+template<class T>
+T* Matriz<T>::buscar(const T&v){
+    
+    for (size_t i = 0; i < cont; i++)
+    {
+       if (arreglo[i]==v){
+           return &arreglo[i];
+       }
+    }
+    
+    return nullptr;
 }
 
 template<class T>

@@ -54,7 +54,12 @@ int main() {
 	m.eliminar_inicio();
 	m.mostrar();
 	cout<<endl;
+	Bodega b9;
+	b9.setProducto("Frituras");
 
+	Bodega *b = m.buscar(b9);
+	cout<<b<<" "<<*b<<endl;
+	cout<<endl;
 	
 
 
