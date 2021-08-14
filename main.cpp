@@ -43,6 +43,19 @@ int main() {
 	m.mostrar();
 	cout<<endl;
 	
+	m.eliminar(3);
+
+	m.mostrar();
+	cout<<endl;
+	m.eliminar_final();
+	m.mostrar();
+	cout<<endl;
+
+	m.eliminar_inicio();
+	m.mostrar();
+	cout<<endl;
+
+	
 
 
 
