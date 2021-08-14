@@ -5,7 +5,53 @@
 using namespace std;
 Matriz::Matriz(){
 
+    arreglo = new Bodega[MAX];
     cont=0;
+    tam = MAX;
+}
+
+Matriz::~Matriz(){
+
+    delete[] arreglo;
+}
+
+void Matriz::expandir(){
+    Bodega *nuevo = new Bodega[tam+MAX];
+
+    for (size_t i=0; i<cont; i++){
+        nuevo[i]=arreglo[i];
+    }
+
+    delete[] arreglo;
+    arreglo = nuevo;
+    tam=tam+MAX;
+}
+
+size_t Matriz::size(){
+    return cont;
+}
+
+void Matriz::insertar_final(Bodega &v){
+    if(cont == tam){
+        expandir();
+    }
+
+    arreglo[cont]=v;
+    cont++;
+}
+
+void Matriz::insertar_inicio(Bodega &v){
+    if(cont == tam){
+        expandir();
+    }
+
+    for (size_t i =cont; i > 0; i--)
+    {
+        arreglo[i]=arreglo[i-1];
+    }
+    arreglo[0] = v;
+    cont++;
+    
 }
 
 void Matriz::agregarBodega(const Bodega&b){
